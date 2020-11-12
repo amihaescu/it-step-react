@@ -1,5 +1,5 @@
 import React from "react";
-import LikeButton from './likeButton';
+import LikeButton from './like-button/likeButton';
 
 export default function Comment(props) {
     let { user, date, text, likes } = props
