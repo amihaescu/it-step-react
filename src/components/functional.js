@@ -1,14 +1,16 @@
 import React from "react";
+import LikeButton from './likeButton';
+
 export default function Comment(props) {
     let { user, date, text, likes } = props
+    
     return (
-        <React.Fragment>
-            <div>{user}</div>
-            <span>{date}</span>
+        <div className="card m-2">
+            <div style={{ fontWeight: "bold"}}>{user}</div>
+            <span style={{ color: "gray"}}>{date}</span>
             <div>{text}</div>
-            <div>Likes: {likes}</div>
-            <hr />
-        </React.Fragment>
+            <LikeButton likes={likes}></LikeButton>
+        </div>
     )
 }
 

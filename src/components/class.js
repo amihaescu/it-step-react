@@ -2,7 +2,9 @@ import Comment from './functional'
 import React from 'react'
 
 export default class CommentList extends React.Component {
-
+    static defaultProps = {
+        title: "Comments"
+    }
     constructor(props) {
         super(props);
         console.log(props);
@@ -35,7 +37,7 @@ export default class CommentList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>{this.state.title}</h1>
                 <Comment {...this.state.comments[0]}></Comment>
                 <Comment user={this.state.comments[1].user} date={this.state.comments[1].date} text={this.state.comments[1].text}></Comment>
@@ -46,6 +48,6 @@ export default class CommentList extends React.Component {
     }
 }
 
-CommentList.defaultProps={
-    title: "Comments"
-} ;
+// CommentList.defaultProps={
+//     title: "Comments"
+// } ;
