@@ -1,27 +1,18 @@
-import React from 'react';
+import { React, useState } from 'react';
 
 
-export default class LikeButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            likes: props.likes
-        }
+export default function LikeButton(props) {
+
+    const [currentLikes, setCurrentLikes] = useState(props.likes)
+
+    const increaseLike = () => {
+        setCurrentLikes(currentLikes + 1);
     }
+    return (
+        <div>
+            {currentLikes}
+            <button className="btn btn-secondary m-2" onClick={increaseLike}>+</button>
+        </div>
+    )
 
-    
-    render() {
-        const like = () => {
-            this.setState({
-                likes: this.state.likes + 1
-            });
-            console.log('liked...')
-        }
-        return (
-            <div>
-                {this.state.likes}
-                <button className="btn btn-secondary m-2" onClick={like}>+</button>
-            </div>
-        )
-    }
 }
