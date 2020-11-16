@@ -1,5 +1,6 @@
 import Comment from './functional'
 import React from 'react'
+import  { commentsDb } from '../db/comments-db';
 
 export default class CommentList extends React.Component {
     static defaultProps = {
@@ -7,35 +8,10 @@ export default class CommentList extends React.Component {
     }
     constructor(props) {
         super(props);
-        console.log(props);
+        console.log(props.match.params.topic);
         this.state = {
             title: props.title,
-            comments: [
-                {
-                    id: 1,
-                    user: 'Jane',
-                    text: 'This page is awesome',
-                    date: new Date(2020, 9, 4, 14, 20).toISOString()
-                },
-                {
-                    id: 2,
-                    user: 'James',
-                    text: 'I think it could be better',
-                    date: new Date(2020, 9, 4, 14, 20).toISOString()
-                },
-                {
-                    id: 3,
-                    user: 'Allan',
-                    text: 'It\'s ok the way it is',
-                    date: new Date(2020, 9, 4, 14, 20).toISOString()
-                }, 
-                {
-                    id: 4,
-                    user: 'Maria',
-                    text: 'I don\'t know....',
-                    date: new Date(2020, 9, 4, 14, 20).toISOString()
-                }
-            ]
+            comments: commentsDb[props.match.params.topic]
         }
     }
 
