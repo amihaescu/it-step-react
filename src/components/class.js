@@ -7,12 +7,21 @@ export default class CommentList extends React.Component {
         title: "Comments"
     }
     constructor(props) {
+        console.log('constructor')
         super(props);
         console.log(props.match.params.topic);
         this.state = {
             title: props.match.params.topic,
             comments: commentsDb[props.match.params.topic]
         }
+    }
+
+    componentDidMount() {
+        console.log('mounted component')
+    }
+
+    componentWillUnmount() {
+        console.log('component unmounted')
     }
 
     render() {

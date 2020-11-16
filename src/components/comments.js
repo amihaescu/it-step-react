@@ -12,9 +12,10 @@ export default function Comments() {
 
 function TopicSelector() {
     return (
-        <div>
+        <div>         
             <h2>Topic selector</h2>
-            <Link to="/comments/houses">Houses</Link>
+            <Link className="p-2" to="/comments/games">Games</Link>
+            <Link className="p-2" to="/comments/houses">Houses</Link>
         </div>
 
     )

@@ -1,12 +1,11 @@
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import './App.css';
-import CommentList from './components/class';
-import SignUpForm from './forms/sign-up';
-import LoginForm from './forms/login';
-import Navbar from './navbar/navbar';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Comments from './components/comments';
 import Main from './components/main';
 import NotFound from './components/not-found';
-import Comments from './components/comments';
+import LoginForm from './forms/login';
+import SignUpForm from './forms/sign-up';
+import Navbar from './navbar/navbar';
 
 function App() {
 
