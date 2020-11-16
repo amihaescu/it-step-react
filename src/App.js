@@ -6,6 +6,7 @@ import Navbar from './navbar/navbar';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Main from './components/main';
 import NotFound from './components/not-found';
+import Comments from './components/comments';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route exact path="/signup" component={SignUpForm} />
           <Route exact path="/login" component={LoginForm} />
-          <Route path="/comments/:topic" component={CommentList} />
+          <Route path="/comments" component={Comments} />
           <Route path="/disclaimer" component={Disclaimer} />
           <Route component={NotFound} />
         </Switch>

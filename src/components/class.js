@@ -10,7 +10,7 @@ export default class CommentList extends React.Component {
         super(props);
         console.log(props.match.params.topic);
         this.state = {
-            title: props.title,
+            title: props.match.params.topic,
             comments: commentsDb[props.match.params.topic]
         }
     }
@@ -19,10 +19,6 @@ export default class CommentList extends React.Component {
         return (
             <div className="container">
                 <h1>{this.state.title}</h1>
-                {/* <Comment {...this.state.comments[0]}></Comment>
-                <Comment user={this.state.comments[1].user} date={this.state.comments[1].date} text={this.state.comments[1].text}></Comment>
-                <Comment {...this.state.comments[2]}></Comment>
-                <Comment {...this.state.comments[3]}></Comment> */}
                 {this.state.comments.map(comment => (
                     <Comment key={comment.id} {...comment}></Comment>
                 ))}
