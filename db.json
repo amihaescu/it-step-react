@@ -1,0 +1,54 @@
+{
+    "comments" :[
+        {
+            "id": 1,
+            "user": "Jane",
+            "text": "This page is awesome",
+            "date": "2020-11-11T12:39",
+            "category": "games"
+        },
+        {
+            "id": 3,
+            "user": "Allan",
+            "text": "It\"s ok the way it is",
+            "date": "2020-11-11T12:39",
+            "category": "games"
+        }, 
+        {
+            "id": 4,
+            "user": "Maria",
+            "text": "I don\"t know....",
+            "date": "2020-11-11T12:39",
+            "category": "houses"            
+        },
+        {
+            "id": 21,
+            "user": "Jane",
+            "text": "This page is awesome",
+            "date": "2020-11-11T12:39",
+            "category": "houses"
+        },
+        {
+            "id": 10,
+            "user": "Jane",
+            "text": "This page is awesome",
+            "date": "2020-11-11T12:39",
+            "category": "holidays"
+        }
+    ],
+    "categories" : [
+        {
+            "id": 1,
+            "name": "houses"
+        },
+        {
+            "id": 2,
+            "name": "games"
+        },
+        {
+            "id": 3,
+            "name": "holidays"
+        }
+        
+    ]
+}

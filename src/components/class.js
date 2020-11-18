@@ -2,23 +2,26 @@ import Comment from './functional'
 import React from 'react'
 import  { commentsDb } from '../db/comments-db';
 import { PropTypes } from 'prop-types';
+import { getCommentsByCategory } from '../services/http-service';
 
 export default class CommentList extends React.Component {
     static defaultProps = {
         title: "Comments"
     }
     constructor(props) {
-        console.log('constructor')
         super(props);
-        console.log(props.match.params.topic);
         this.state = {
             title: props.match.params.topic,
-            comments: commentsDb[props.match.params.topic]
+            comments: []
         }
+        
     }
 
     componentDidMount() {
         console.log('mounted component')
+        getCommentsByCategory(this.state.title).then(results =>{
+            this.setState({...this.state, comments: results.data })
+        })
     }
 
     componentWillUnmount() {
