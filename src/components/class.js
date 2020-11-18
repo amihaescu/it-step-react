@@ -1,6 +1,7 @@
 import Comment from './functional'
 import React from 'react'
 import  { commentsDb } from '../db/comments-db';
+import { PropTypes } from 'prop-types';
 
 export default class CommentList extends React.Component {
     static defaultProps = {
@@ -39,3 +40,10 @@ export default class CommentList extends React.Component {
 // CommentList.defaultProps={
 //     title: "Comments"
 // } ;
+CommentList.propType = {
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            topic: PropTypes.string.isRequired
+        })
+    })
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from './functional';
 
 export default class Main extends React.Component {
 
