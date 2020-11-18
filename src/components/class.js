@@ -13,8 +13,7 @@ export default class CommentList extends React.Component {
         this.state = {
             title: props.match.params.topic,
             comments: []
-        }
-        
+        }        
     }
 
     componentDidMount() {
